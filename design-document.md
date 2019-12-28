@@ -70,6 +70,14 @@ https://api.slack.com/messaging/webhooks
 - What`s Maven?  
 ・Mavenとは？  
 
+### クラス設計
+■ Application  
+　- BatchRunner（implements CommandLineRunner）run()
+　- BatchExecutable（バッチ実行クラス）解析する - 各社ごと　　
+　- Exception（実行例外クラス）　
+　- Service or Processor　
+　- constant（定数クラス）　
+　- enum -> 各新聞社定義 会社名 - URL　
 
 ### dependency
 ```
@@ -183,19 +191,9 @@ public class SampleApplication implements CommandLineRunner {
 ● メインとなるアプリケーションクラスを1つ作り、@SpringBootApplicationアノテーションを付与、
   そのクラスのmainにて、自分のクラスを指定してSpringApplicationインスタンスを作って、runするだけ。
 
-　■ Application
-　　- BatchRunner（implements CommandLineRunner）
-　　　　# run()
-　　　　- BatchExecutable（バッチ実行クラス）
-　　　　- 解析する - 各社ごと
-　　- Exception（実行例外クラス）
-　　- Service or Processor
-　　- constant（定数クラス）
-　　- enum -> 各新聞社定義 会社名 - URL
-　　
-● スクレイピングを試してみよう。
--
 
+　
+```
 ● 冬休みで学ぶべきこと（体系的に学び、そして「自分の言葉で伝えられるようにする」）
 　・Java Webアーキテクチャー概要　
 　- Webシステムの基本的な仕組みを説明したうえで、Java EE及びSpringの2つの代表的なフレームワークを対象とし、
@@ -206,3 +204,4 @@ public class SampleApplication implements CommandLineRunner {
 　- JavaScript本格入門をしっかり読んで、まとめる。理解する。
 　→ 読んで学んだことを使って、ポートフォリオを作る。
 　https://www.casareal.co.jp/ls/service/openseminar/html/s101
+```
