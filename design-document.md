@@ -111,15 +111,28 @@ https://qiita.com/tag1216/items/898348a7fc3465148bc8
 → いちいちNewしなくていいよ。インスタンスの管理はDIコンテナでやるんで。
 ```
 　　
-　
+
 ● Spring Bootの基礎  
 https://www.ibm.com/developerworks/jp/java/library/j-spring-boot-basics-perry/index.html  
   　
 **What's Component Scan？（コンポーネントスキャンとは？）**
-- クラスを作って@Componentを書いて、@Autowireでメンバーに注入する。  
-- Spring Bootでは、デフォルトだと自身のパッケージ配下のクラスに対してコンポーネントスキャンする  
+- クラスを作って@Componentを書いて、@Autowireでメンバーに注入する。    
+- Spring Bootでは、デフォルトだと自身のパッケージ配下のクラスに対してコンポーネントスキャンする   
 
-【対象法】
+- @Componentと@Autowired
+```
+@Component は インスタンスを Spring 管理下におくため、クラスに付けるアノテーション。
+@Autowired は Spring 管理下のオブジェクトの中から、適切なものをセットするため、インスタンス変数に付けるアノテーション。
+
+@Component
+public class ClassA {
+
+	@Autowired
+	private ClassA classA;
+}
+```
+
+【対象法】  
 ・コンポーネントスキャンするパッケージを変更する。  
 　→ 具体的には、アプリケーションクラスで@SpringBootApplicationに  
 　　scanBasePackages = {"コンポーネントスキャン対象のパッケージ"}を指定してやればOK。  
