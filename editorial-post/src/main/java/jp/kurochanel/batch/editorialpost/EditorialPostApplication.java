@@ -5,9 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class EditorialPostApplication {
-
     public static void main(String[] args) {
-        SpringApplication.run(EditorialPostApplication.class, args);
+        SpringApplication.run(BatchExecutable.class, args);
     }
-
 }
