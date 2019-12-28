@@ -119,6 +119,19 @@ https://www.ibm.com/developerworks/jp/java/library/j-spring-boot-basics-perry/in
 - クラスを作って@Componentを書いて、@Autowireでメンバーに注入する。    
 - Spring Bootでは、デフォルトだと自身のパッケージ配下のクラスに対してコンポーネントスキャンする   
 
+- @Componentと@Autowired
+```
+@Component は インスタンスを Spring 管理下におくため、クラスに付けるアノテーション。
+@Autowired は Spring 管理下のオブジェクトの中から、適切なものをセットするため、インスタンス変数に付けるアノテーション。
+
+@Component
+public class ClassA {
+
+	@Autowired
+	private ClassA classA;
+}
+```
+
 【対象法】  
 ・コンポーネントスキャンするパッケージを変更する。  
 　→ 具体的には、アプリケーションクラスで@SpringBootApplicationに  
