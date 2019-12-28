@@ -73,7 +73,7 @@ https://api.slack.com/messaging/webhooks
 ### クラス設計
 ■ Application  
 　- BatchRunner（implements CommandLineRunner）run()  
-　- BatchExecutable（バッチ実行クラス）解析する - 各社ごと  　
+　- BatchExecutable（バッチ実行クラス）解析する - 各社ごと  
 　- Exception（実行例外クラス）  
 　- Service or Processor  
 　- constant（定数クラス）  
