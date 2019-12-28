@@ -72,12 +72,12 @@ https://api.slack.com/messaging/webhooks
 
 ### クラス設計
 ■ Application  
-　- BatchRunner（implements CommandLineRunner）run()
-　- BatchExecutable（バッチ実行クラス）解析する - 各社ごと　　
-　- Exception（実行例外クラス）　
-　- Service or Processor　
-　- constant（定数クラス）　
-　- enum -> 各新聞社定義 会社名 - URL　
+　- BatchRunner（implements CommandLineRunner）run()  
+　- BatchExecutable（バッチ実行クラス）解析する - 各社ごと  　
+　- Exception（実行例外クラス）  
+　- Service or Processor  
+　- constant（定数クラス）  
+　- enum -> 各新聞社定義 会社名 - URL  
 
 ### dependency
 ```
