@@ -10,7 +10,7 @@ kuro-channel/editorial-post-batch
 　いや、それはそれでつまらない。。どうせだったら、普段の自分の生活の中で、自然と目に入る仕組みを作りたい。  
 　→ botを毎日自分用のslackチャンネルに投稿するような仕組みにしたい。それなら毎日みる！  
 
-### ● 仕様検討
+## ● 仕様検討
 　各社の社説（朝・夕方）のWeb版HTMLを取得し、URLをslackに投稿する、という簡単アプリケーション。  
 　
 　**取得する社説（各社）まずは5個の新聞でいいかな～。**  
@@ -26,7 +26,7 @@ kuro-channel/editorial-post-batch
 　社説の中で気になった記事を一つ選んで、要約＆まとめてみよう  
 　URL：Webフォームへのリンク  
 　
-### ● 実装仕様  
+## ● 実装仕様  
 　・Java11.0 / kotlin（Unitテストのみ）  
 　・Spring2.0  
 　・定期実行（Linuxでcron実行）朝と夕方  
@@ -40,7 +40,7 @@ kuro-channel/editorial-post-batch
 　・springboot × Dockerで！  
 　・ジョブの仕様で、引数ごとに各新聞の社説のみ、実行することができる！  
 
-### Slack投稿イメージ、Webフォームイメージ
+## Slack投稿イメージ、Webフォームイメージ
 ```
 【今日の社説】2020/07/27 Mon.
  1. 〇〇新聞
@@ -75,5 +75,5 @@ kuro-channel/editorial-post-batch
 ・WEBフォーム側はPHPで実装する
 ```
 
-### 【使うライブラリ】  
+## 【使うライブラリ】  
 　・jsoup：HTMLをスクレイピングするライブラリ。  
